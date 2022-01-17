@@ -1,0 +1,35 @@
+spring:
+  data:
+    mongodb:
+      authentication-database: admin
+      database: BookService
+      uri: mongodb://root:password@localhost:27017
+      auto-index-creation: on
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: '.html'
+    enabled: false
+
+management:
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
+info:
+  app:
+    name: My app
+    description: Testing out the app
+    version: 1.0.0.
+
+server:
+  port:
+
+cache:
+  enabled: true
+  ttl:
+    seconds:
+      book-list: 60
